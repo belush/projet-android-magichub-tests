@@ -14,24 +14,21 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public List<User> getUsers() {
-        // TODO: A modifier
-        return null;
+        return users;//sur
     }
-
     /**
      * Generate a random {@link User} and add it {@link FakeApiService#users} list.
      * This user must be get from the {@link FakeApiServiceGenerator#FAKE_USERS_RANDOM} list.
      */
     @Override
     public void generateRandomUser() {
-        // TODO: A modifier
+        users.add(User.random());
     }
-
     /**
      * Delete a {@link User} from the {@link FakeApiService#users} list.
      */
     @Override
     public void deleteUser(User user) {
-        // TODO: A modifier
+        users.remove(user);
     }
 }
